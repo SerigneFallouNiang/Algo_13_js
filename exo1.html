@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercice 1</title>
+</head>
+<body>
+    Exercice 1 : moyenne de nombres
+Écrire un programme qui demande à l'utilisateur une série de nombres, puis calcule et affiche leur moyenne.
+
+    <script>
+       function calculerMoyenne() {
+    let nombres = [];
+    let input;
+    
+    while (true) {
+        input = prompt("Entrez un nombre (ou 'fin' pour terminer):");
+        if (input.toLowerCase() === 'fin') break;
+        nombres.push(Number(input));
+    }
+    
+    if (nombres.length === 0) return "Aucun nombre entré";
+    
+    let somme = nombres.reduce((a, b) => a + b, 0);
+    return somme / nombres.length;
+}
+
+console.log("La moyenne est : " + calculerMoyenne());
+
+    </script>
+</body>
+</html>

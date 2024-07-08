@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 7</title>
+</head>
+<body>
+    <script>
+        function somme() {
+            let total = 0;
+            let nombre;
+
+            while (true) {
+                nombre = parseFloat(prompt("Entrez un nombre à additionner (0 pour terminer):"));
+                if (nombre === 0) {
+                    break;
+                }
+                if (!isNaN(nombre)) {
+                    total += nombre;
+                } else {
+                    alert("Veuillez entrer un nombre valide.");
+                }
+            }
+            return total;
+        }
+
+        let resultat = somme();
+        console.log(`La somme des nombres est: ${resultat}`);
+    </script>
+</body>
+</html>

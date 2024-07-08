@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exo 5</title>
+</head>
+<body>
+    <script>
+        let password = prompt("Entrez un mot de passe :");
+
+            function isStrongPassword(password) {
+                if (password.length < 8) return false;
+                if (!/\d/.test(password)) return false;
+                if (!/[!@#$%^&*]/.test(password)) return false;
+                return true;
+            }
+
+            if (isStrongPassword(password)) {
+                console.log("Mot de passe suffisamment fort");
+            } else {
+                console.log("Mot de passe faible");
+            }
+
+    </script>
+</body>
+</html>
